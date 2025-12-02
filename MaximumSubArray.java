@@ -13,7 +13,7 @@ public class MaximumSubArray {
         return maxSoFar;
     }
 
-    public  int maxSumofaPositiveArray(int[] nums){
+    public  int maxSumOfaPositiveArray(int[] nums){
         int maxSum = 0;
         for(int i = 0; i < nums.length;i++){
             if(nums[i] > 0){
