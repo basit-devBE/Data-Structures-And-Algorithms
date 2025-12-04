@@ -53,3 +53,4 @@ public class Linked {
 // list.removeLast();  // Removes the last element
 // String firstElement = list.get(0); // Accesses the first element
 // System.out.println(list); // Output: [C, A]
+
