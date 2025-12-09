@@ -1,9 +1,10 @@
 public  class Main {
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5,6,7,8,9};
-        MaximumSubArray msa = new MaximumSubArray();
-        int result = msa.maxSumofaPositiveArray(nums);
-        System.out.println("Maximum sum of a positive array: " + result);
+       int sum = Recursion.sum(10);
+       int sumtoend = Recursion.sumtoend(10, 50);
+
+       System.out.println(sum);
+       System.out.println(sumtoend);
 
     }
 }
