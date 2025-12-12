@@ -11,7 +11,7 @@ public class HighLowGame {
             guesses ++;
             int mid = (low + high) /2;
             if(arr[mid]== target){
-                return mid;
+                return guesses;
             }else if(arr[mid] < target){
                 low = mid +1;
             }else{
