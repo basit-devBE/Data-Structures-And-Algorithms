@@ -41,7 +41,6 @@ public class EmployeeSearch {
     public static void main(String[] args) {
         EmployeeSearch es = new EmployeeSearch();
         
-        // Create subdepartments (deepest level)
         Department techSupport = es.new Department();
         techSupport.name = "Tech Support";
         techSupport.interns = new int[]{88, 45, 12};  // Target 88 is here!
@@ -54,28 +53,24 @@ public class EmployeeSearch {
         webDev.managers = new int[]{800, 810, 820};
         webDev.subDepartments = new Department[0];
         
-        // Create Tech department (middle level)
         Department tech = es.new Department();
         tech.name = "Tech";
         tech.interns = new int[]{99};
         tech.managers = new int[]{700, 750, 800};
         tech.subDepartments = new Department[]{techSupport, webDev};
         
-        // Create Marketing department
         Department marketing = es.new Department();
         marketing.name = "Marketing";
         marketing.interns = new int[]{55, 12};
         marketing.managers = new int[]{601, 602, 603};
         marketing.subDepartments = new Department[0];
         
-        // Create Head Office (root level)
         Department headOffice = es.new Department();
         headOffice.name = "Head Office";
         headOffice.interns = new int[]{902, 14, 7};
         headOffice.managers = new int[]{100, 200, 300, 400, 500};
         headOffice.subDepartments = new Department[]{marketing, tech};
         
-        // Test searches
         System.out.println("Searching for Employee ID 88...");
         boolean found88 = es.Search(headOffice, 88);
         System.out.println("Employee 88 found: " + found88);
